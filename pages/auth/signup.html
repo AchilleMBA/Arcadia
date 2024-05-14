@@ -11,22 +11,34 @@
       <div class="mb-3">
         <label for="NomInput" class="form-label">Nom</label>
         <input type="text" class="form-control" id="NomInput" placeholder="Votre nom">
+        <div class="invalid-feedback">Le nom est requis</div>
       </div>
       <div class="mb-3">
         <label for="PrenomInput" class="form-label">Prenom</label>
         <input type="text" class="form-control" id="PrenomInput" placeholder="Votre nom">
+        <div class="invalid-feedback">Le Prénom est requis</div>
       </div>
       
       <div class="mb-3">
         <label for="EmailInput" class="form-label">Email</label>
         <input type="email" class="form-control" id="EmailInput" placeholder="john@wick.com">
+        <div class="invalid-feedback">Le mail n'est pas au bon format</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="PasswordInput">Mot de passe </label>
+        <input type="password" class="form-control" id="PasswordInput">
+        <div class="invalid-feedback">Le mot de passe n'est pas assez robuste: Au moins 8 caracteres, comprenant au moins 1 lettre majuscule, 1 minuscule, 1 chiffre, et 1 caractere spéciale</div>
+        <div class="valid-feedback">Le message est robuste</div>
       </div>
       <div class="mb-3">
-        <label for="ValidatePasswordInput">Mot de passe </label>
+        <label for="ValidatePasswordInput">Valider votre mot de passe </label>
         <input type="password" class="form-control" id="ValidatePasswordInput">
+        <div class="invalid-feedback"> La confirmation n'est pas identique</div>
+        <div class="valid-feedback">Le mot de passe est identique</div>
       </div>
       
-      <button type="submit" class="btn btn-primary text-center pt-3">Inscription</button>
+      <button type="submit" class="btn btn-primary text-center pt-3" id="btn-validation-inscription">Inscription</button>
     </form>
   
   <div class=" text-center">
