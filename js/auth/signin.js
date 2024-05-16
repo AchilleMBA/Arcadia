@@ -13,6 +13,7 @@ function checkCredentials(){
        setToken(token);
 
 
+        setCookie("role", "admin", 7);
        window.location.replace("/");
     }
     else{
