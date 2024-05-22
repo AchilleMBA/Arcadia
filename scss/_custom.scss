@@ -10,6 +10,6 @@ $black:#352727;
 $font-family-sans-serif: "Montserrat", sans-serif !default;
 $font-family-sans-serif: "nobile", sans-serif !default;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-
+//@import "../node_modules/bootstrap/scss/bootstrap";
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
 // Then add additional custom code here

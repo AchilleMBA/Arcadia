@@ -26,7 +26,7 @@ L'aménagement de l'habitat comprend une variété de plantes tropicales, y comp
                 </p>
             </div>
             <div class="col">
-                <img class="w-100 rounded"  src="/images/tiger-2530158_640.jpg"/>
+                <img class="w-100 rounded"  src="/images/tiger-2530158_640.jpg" alt="tigre allongé sur un traonc d'arbre"/>
             </div>
             
 
@@ -47,7 +47,13 @@ L'aménagement de l'habitat comprend une variété de plantes tropicales, y comp
                     <p class="card-text"><b>Date de passage: </b>12/05/2024</p><br>
                     <div class="bouton">
                         <button class="btn btn-primary">modification</button>
+    
                     </div>
+
+                    <div class="bouton">
+                        <button class="btn btn-primary" id="like-btn" onclick="like()">Like</button>
+                    </div>
+                    <span><p id="like-count">0</p></span>
     
                 </div>
     </div>
@@ -132,4 +138,18 @@ L'aménagement de l'habitat comprend une variété de plantes tropicales, y comp
    </div>
 </div>
 
+<script>// Récupérer la référence au bouton Like et au compteur de likes
+    const likeButton = document.getElementById('like-btn');
+    const likeCount = document.getElementById('like-count');
+    
+    // Vérifier s'il y a déjà des likes stockés dans le local storage
+    let likes = localStorage.getItem('likes') ? parseInt(localStorage.getItem('likes')) : 0;
+    likeCount.textContent = likes;
+    
+    // Fonction pour incrémenter le compteur de likes et enregistrer dans le local storage
+    function like() {
+        likes++;
+        likeCount.textContent = likes;
+        localStorage.setItem('likes', likes.toString());
+    }</script>
 
